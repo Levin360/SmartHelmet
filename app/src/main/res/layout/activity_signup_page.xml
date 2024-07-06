@@ -1,0 +1,270 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center_horizontal|top"
+    tools:context=".signup_page">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="40dp"
+        android:gravity="center_horizontal">
+
+        <!-- Sign Up Text View-->
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="115dp"
+            android:text="Sign Up"
+            android:textColor="@color/black"
+            tools:layout_editor_absoluteX="173dp"
+            tools:layout_editor_absoluteY="184dp" />
+
+        <!-- Name EditText -->
+        <EditText
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:ems="13"
+            android:hint="Name"
+            android:inputType="text"
+            android:textColor="@color/black"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="219dp" />
+
+        <!-- Age EditText-->
+        <EditText
+            android:id="@+id/textAge"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:ems="13"
+            android:hint="Age"
+            android:inputType="number"
+            android:textColor="@color/black"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="281dp" />
+
+        <!-- Blood Type and Sex -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="5dp">
+
+            <!-- Blood Type -->
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/textBloodType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:ems="5"
+                        android:hint="Blood Type"
+                        android:inputType="text"
+                        android:textColor="@color/black"/>
+                </TableRow>
+            </TableLayout>
+
+            <!-- Sex RadioButton -->
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="40dp">
+
+                <!-- TableRow for RadioButtons -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textSex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Sex"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupSex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <!-- RadioButton for Men -->
+                        <RadioButton
+                            android:id="@+id/radioMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="M"
+                            android:textColor="@color/black"/>
+
+                        <!-- RadioButton for Women -->
+                        <RadioButton
+                            android:id="@+id/radioFemale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="F"
+                            android:textColor="@color/black"/>
+                    </RadioGroup>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <!-- Emergency Contact Person -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="5dp">
+
+                <TextView
+                    android:id="@+id/EmergencyContactPerson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Emergency \nContact Person"
+                    android:layout_weight="1"
+                    android:textSize="11sp"
+                    android:textColor="@color/black"/>
+
+                <EditText
+                    android:id="@+id/textEmergencyContactPerson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:hint=""
+                    android:layout_weight="2"
+                    android:textColor="@color/black"/>
+            </TableRow>
+        </TableLayout>
+
+        <!-- Emergency Contact Number -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="5dp">
+
+                <TextView
+                    android:id="@+id/EmergencyContactNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Emergency \nContact Number"
+                    android:layout_weight="1"
+                    android:textSize="11sp"
+                    android:textColor="@color/black"/>
+
+                <EditText
+                    android:id="@+id/textEmergencyContactNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:hint=""
+                    android:layout_weight="2"
+                    android:textColor="@color/black"/>
+            </TableRow>
+        </TableLayout>
+
+        <!-- Known Medical Condition -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="5dp">
+
+                <TextView
+                    android:id="@+id/knowMedicalCondition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Known Medical \nCondition"
+                    android:layout_weight="1"
+                    android:textSize="11sp"
+                    android:textColor="@color/black"/>
+
+                <EditText
+                    android:id="@+id/textKnownMedicalCondtion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:inputType="textMultiLine"
+                    android:hint=""
+                    android:layout_weight="2"
+                    android:textColor="@color/black"/>
+            </TableRow>
+        </TableLayout>
+
+        <!-- Username -->
+        <EditText
+            android:id="@+id/textUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginTop="5dp"
+            android:ems="13"
+            android:inputType="text"
+            android:hint="Username"
+            android:drawableLeft="@drawable/usericon"
+            android:textColor="@color/black"/>
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/textPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="13"
+            android:inputType="text"
+            android:hint="Password"
+            android:drawableLeft="@drawable/password"
+            android:textColor="@color/black"/>
+
+        <!-- Fingerrint Button-->
+        <Button
+            android:id="@+id/fingerprintButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Sign Up" />
+
+    </LinearLayout>
+</RelativeLayout>
